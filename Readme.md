@@ -5,58 +5,72 @@ This document describes how to set up the python environment required for the la
 ## 1. Environment set up
 Please follow the next steps in a linux environment using either a linux desktop version or a WSL from a Windows OS.
 
+For setting WSL you will need to open the PowerShell and run the following commands
+
+```bash
+wsl --set-default-version 2
+wsl --install -d Ubuntu-20.04
+```
+
 ### 1.1 New environment
 Follow this section only in case of setting the the python environment in a new computer.
 
 #### 1.1.1 Clone the repository
 First move to the directory were you want to build your environemnt, for instance in a /lib directory in your /home.
 
-    $ cd
-    $ mkdir lib
-    $ cd lib
+```bash
+cd
+mkdir lib
+cd lib
+```
 
 Now clone the lab session contents from the remote repository.
 
-    $ git clone https://github.com/ericguerrero/11765_MUSI.git
+git clone https://github.com/ericguerrero/11765_MUSI.git
 
 #### 1.1.2 Set python environment
 Go to the repository directory and execute next commands.
 
-    $ python3 -m venv env
-    $ source env/bin/activate
-    $ python3 -m pip install -r requirements.txt
+python3 -m venv env
+source env/bin/activate
+python3 -m pip install -r requirements.txt
 
 In case you need extra packages install them using the following command.
 
-    $ python3 -m pip install **name_of_a_packacge_you_need**
-
+```bash
+python3 -m pip install **name_of_a_packacge_you_need**
+```
 
 ### 1.2 Update the repository
 Folow this steps for each new lab session.
 Go to your local repository directory, if it is located in a /lib directory on the /home use the following commands.
 
-    $ cd lib/11765_MUSI
+```bash
+cd lib/11765_MUSI
+```
 
 Now commit your changes and syncronize with the remote repository on github in order to download the files for the new lab session. 
 
-    $ git add -A
-    $ git commit -m "add local changes"
-    $ git pull
+```bash
+git add -A
+git commit -m "add local changes"
+git pull
+```
 
 Please notice that before being able to commit you will need to set up your git configuration as follows.
-
-    $ git config --global user.name "Mona Lisa"
-    $ git config --global user.email "email@example.com"
-
+```bash
+git config --global user.name "Mona Lisa"
+git config --global user.email "email@example.com"
+```
 ### 1.3 Open the jupyter notebook
 Before launching the notebook to start with the new lab session you need to source your environment, use the following command.
-
-    $ source env/bin/activate
-
+```bash
+source env/bin/activate
+```
 Now you can launch the jupyter notebook using next command.
-
-    $ jupyter notebook
-
+```bash
+jupyter notebook
+```
 Once inside jupyter notebook go to the notebooks directory using the menu at the left of the screen and open the desired laboratory notebook. Read carefully the statement and start filling the text and code blocks to solve the different tasks. 
 
 ------------------------------------
