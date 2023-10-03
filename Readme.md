@@ -30,11 +30,11 @@ git clone https://github.com/ericguerrero/11765_MUSI.git
 
 #### 1.1.2 Set python environment
 Go to the repository directory and execute next commands.
-
+```bash
 python3 -m venv env
 source env/bin/activate
 python3 -m pip install -r requirements.txt
-
+```
 In case you need extra packages install them using the following command.
 
 ```bash
