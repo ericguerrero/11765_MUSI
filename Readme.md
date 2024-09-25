@@ -33,8 +33,16 @@ Go to the repository directory and execute next commands.
 ```bash
 python3 -m venv env
 source env/bin/activate
-python3 -m pip install -r requirements.txt
+python3 -m pip install pip-tools
 ```
+
+Now edit the 'pyproject.toml' to specify your python version preference, and build the 'requirements.lock' with the following lines.
+```bash
+
+pip-compile --output-file=requirements.lock pyproject.toml
+python3 -m pip install -r requirements.lock
+```
+
 In case you need extra packages install them using the following command.
 
 ```bash

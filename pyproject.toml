@@ -1,0 +1,74 @@
+[project]
+name = "dart"
+readme = "README.md"
+requires-python = ">=3.10"
+version='0.8.7'
+# Every time you update this you should regenerate a requirements.lock
+dependencies = [
+    'matplotlib>=3.6.0',
+    'numpy>=1.23.3',
+    'pandas>=1.4.4',
+    'scikit-learn>=1.1.2',
+    'scipy>=1.9.1',
+    'seaborn>=0.12.0',
+]
+
+[project.optional-dependencies]
+ci = ['ruff==0.3.5','mypy==1.9.0', "types-PyYAML==6.0.12.20240311", "pytest==7.2.2", "pytest-azurepipelines", "pytest-xdist", "coverage==7.5.3", "beartype==0.16.2"]
+build=['build==1.2.1', 'kedro==0.19.3', 'commitizen==3.10.1']
+
+[build-system]
+requires = ["setuptools>=65.5.1"]  # PEP 518 specifications
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"dart" = ["conf/**/*.yml"]
+
+[tool.ruff]
+line-length = 121
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "env",
+    "scripts",
+    "tests",
+    "cfg",
+    "src"
+]
+
+[tool.ruff.lint]
+# Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    # "F"   # pyflakes
+]
+ignore = [
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "E402",
+    "E721",
+    "E722",
+    "E501",
+]
