@@ -295,16 +295,16 @@ class ExtendedKalmanFilterSLAM():
         plt.scatter(estimate_xs, estimate_ys, s=50, c='k', marker='.', label='Landmark Estimate')
 
         # Line pointing from current observed landmark to associated landmark
-        xs = [self.landmark_expected[0], self.landmark_current[0]]
-        ys = [self.landmark_expected[1], self.landmark_current[1]]
-        plt.plot(xs, ys, color='c', label='Data Association')
-        plt.text(self.landmark_expected[0], self.landmark_expected[1], str(self.landmark_idx+5))
+        # xs = [self.landmark_expected[0], self.landmark_current[0]]
+        # ys = [self.landmark_expected[1], self.landmark_current[1]]
+        # plt.plot(xs, ys, color='c', label='Data Association')
+        # plt.text(self.landmark_expected[0], self.landmark_expected[1], str(self.landmark_idx+5))
 
         # Expected location of current observed landmark
-        plt.scatter(self.landmark_expected[0], self.landmark_expected[1], s=100, c='r', alpha=0.5, marker='P', label='Current Observed Landmark')
+        # plt.scatter(self.landmark_expected[0], self.landmark_expected[1], s=100, c='r', alpha=0.5, marker='P', label='Current Observed Landmark')
 
         plt.title('EKF SLAM with Unknown Correspondences')
-        plt.legend(loc='upper right')
+        plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
         plt.xlim((-2.0, 6.5))
         plt.ylim((-7.0, 7.0))
         plt.pause(0.5)

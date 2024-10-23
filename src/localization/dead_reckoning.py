@@ -133,7 +133,7 @@ class DeadReckoning():
 
         # plt.title("Localization with only odometry data")
         plt.title("Dead Reckoning")
-        plt.legend()
+        plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
         plt.show()
         
     def represent_dataset(self):

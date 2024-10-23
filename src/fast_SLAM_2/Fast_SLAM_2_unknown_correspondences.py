@@ -388,7 +388,7 @@ class FastSLAM2():
                     s=50, c='k', marker='P', label='Landmark Estimate')
 
         plt.title('Fast SLAM 2.0 with unknown correspondences')
-        plt.legend()
+        plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
         plt.xlim((-2.0, 5.5))
         plt.ylim((-7.0, 7.0))
         plt.pause(1e-16)
