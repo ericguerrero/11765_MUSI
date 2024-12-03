@@ -409,7 +409,7 @@ def build_timeseries(data,cols):
 
 def filter_static_landmarks(lm, barcodes):
     for L,l in dict(barcodes).items(): # Translate barcode num to landmark num
-        lm[lm==l]=L
+        lm.loc[lm.type == l, 'type'] = L
     lm = lm[lm.type > 5] # Keep only static landmarks 
     return lm 
 
