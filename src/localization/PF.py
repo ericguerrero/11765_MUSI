@@ -221,7 +221,7 @@ class ParticleFilter():
         plt.scatter(landmark_xs, landmark_ys, s=200, c='k', alpha=0.2, marker='*', label='Landmark Locations')
 
         plt.title("Particle Filter Localization with Known Correspondences")
-        plt.legend()
+        plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
     def build_dataframes(self):
         self.gt = build_timeseries(self.groundtruth_data, cols=['stamp','x','y','theta'])

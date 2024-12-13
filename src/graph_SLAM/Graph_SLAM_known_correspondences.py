@@ -342,7 +342,7 @@ class GraphSLAM():
         plt.scatter(estimate_xs, estimate_ys, s=50, c='k', marker='.', label='Landmark Estimate')
 
         plt.title('Graph SLAM with known correspondences')
-        plt.legend()
+        plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
         plt.xlim((-2.0, 5.5))
         plt.ylim((-7.0, 7.0))
 

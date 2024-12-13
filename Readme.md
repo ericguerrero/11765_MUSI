@@ -31,10 +31,11 @@ git clone https://github.com/ericguerrero/11765_MUSI.git
 #### 1.1.2 Set python environment
 Go to the repository directory and execute next commands.
 ```bash
-python3 -m venv env
-source env/bin/activate
-python3 -m pip install -r requirements.txt
+python3 -m venv .env
+source .env/bin/activate
+python3 -m pip install -r requirements.lock
 ```
+
 In case you need extra packages install them using the following command.
 
 ```bash
@@ -42,7 +43,7 @@ python3 -m pip install **name_of_a_packacge_you_need**
 ```
 
 ### 1.2 Update the repository
-Folow this steps for each new lab session.
+Follow this steps for each new lab session.
 Go to your local repository directory, if it is located in a /lib directory on the /home use the following commands.
 
 ```bash

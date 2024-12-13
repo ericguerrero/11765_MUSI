@@ -197,7 +197,7 @@ class ExtendedKalmanFilter():
 
         # plt.title("Localization with only odometry data")
         plt.title("EKF Localization with Known Correspondences")
-        plt.legend()
+        plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
         plt.show()
         
     def build_dataframes(self):

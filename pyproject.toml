@@ -1,0 +1,20 @@
+[project]
+name = "musi_nav"
+readme = "README.md"
+requires-python = ">=3.10"
+version='0.0.1'
+# Every time you update this you should regenerate a requirements.lock
+dependencies = [
+    'matplotlib>=3.6.0',
+    'numpy>=1.23.3',
+    'pandas>=1.4.4',
+    'scikit-learn>=1.1.2',
+    'scipy>=1.9.1',
+    'seaborn>=0.12.0',
+    'jupyterlab>=3.4.7',
+]
+
+
+[build-system]
+requires = ["setuptools>=65.5.1"]  # PEP 518 specifications
+build-backend = "setuptools.build_meta"
